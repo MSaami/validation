@@ -1,4 +1,12 @@
 {
-
-
+    "name": "msaami/validation",
+    "description": "A validator like laravel validator",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "require": {
+        "symfony/var-dumper": "^5.0"
+    }
 }
