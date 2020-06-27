@@ -8,7 +8,7 @@ $request = [
 
 
 $validator = new App\Validator([
-    'email' => ['required', 'email']
+    'email' => [ new Required, new Email]
 ], $request);
 
 
