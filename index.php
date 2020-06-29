@@ -1,5 +1,6 @@
 <?php
 
+require_once 'vendor/autoload.php';
 
 $request = [
     'name' => 'Mehrdad Saami',
@@ -8,13 +9,13 @@ $request = [
 
 
 $validator = new App\Validator([
-    'email' => [ new Required, new Email]
+    'email' => [ new App\Rules\Required, new App\Rules\Email]
 ], $request);
 
 
 
 if ($validator->validate()) {
-   return echo "Success";
+   echo "Success";
 }
 
 echo "unsuccess";

@@ -16,9 +16,12 @@ class Validator
     }
 
 
-    public function validate() : boolean
+    public function validate()
     {
-
-
+        foreach ($this->rules as $key => $rules){
+            foreach($rules as $rule) {
+                 return $rule->passes($this->data[$key]);
+            }
+        }
     }
 }
