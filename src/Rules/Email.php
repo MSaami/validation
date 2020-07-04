@@ -6,11 +6,11 @@ class Email implements BaseRule
 {
     public function passes($value)
     {
-        return true;
+        return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
 
     public function message($field)
     {
-        $field . 'is required';
+        return $field . ' must be an email';
     }
 }

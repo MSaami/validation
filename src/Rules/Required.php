@@ -11,6 +11,7 @@ class Required implements BaseRule
 
     public function message($field)
     {
+        return $field . ' must be exists';
 
     }
 
